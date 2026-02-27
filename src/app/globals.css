@@ -2,26 +2,89 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 :root {
   --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --foreground: #202124;
+  --surface: #F8F9FA;
+  --surface-variant: #F1F3F4;
+  --outline: #DADCE0;
+  --outline-variant: #E8EAED;
+  --primary: #4285F4;
+  --on-primary: #ffffff;
+  --primary-container: #D2E3FC;
+  --on-primary-container: #174EA6;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Google Sans', 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* MD3 Focus Ring for A11y */
+*:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+  border-radius: 8px;
+}
+
+/* Google-style scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #dadce0;
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #bdc1c6;
+}
+
+/* Google selection */
+::selection {
+  background: #D2E3FC;
+  color: #174EA6;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .state-layer {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .state-layer::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: currentColor;
+    opacity: 0;
+    transition: opacity 200ms cubic-bezier(0.2, 0, 0, 1);
+    pointer-events: none;
+    border-radius: inherit;
+  }
+
+  .state-layer:hover::after {
+    opacity: 0.04;
+  }
+
+  .state-layer:active::after {
+    opacity: 0.08;
   }
 }
