@@ -12,7 +12,6 @@ import {
   Sparkles,
   HeadphonesIcon,
   Calendar,
-  ArrowRight,
   Target,
   FileText,
   Image,
@@ -21,6 +20,7 @@ import {
   Brain,
   Plug,
   Lock,
+  MessageCircle,
 } from "lucide-react";
 import Link from "next/link";
 import { agents } from "@/data/agents";
@@ -69,16 +69,16 @@ function SalesAgentPage({ agent }: { agent: (typeof agents)[0] }) {
         {/* Header */}
         <div className="max-w-4xl mb-16">
           <div className="flex items-start gap-6 mb-6">
-            <div className="w-[72px] h-[72px] bg-primary-50 rounded-[18px] flex items-center justify-center flex-shrink-0">
+            <div className="w-[72px] h-[72px] bg-accent-50 rounded-[18px] flex items-center justify-center flex-shrink-0">
               {IconComponent && (
                 <IconComponent
-                  className="w-8 h-8 text-primary-600"
+                  className="w-8 h-8 text-accent-500"
                   strokeWidth={1.4}
                 />
               )}
             </div>
             <div>
-              <span className="text-label-md text-primary-600 bg-primary-50 px-3 py-1.5 rounded-full">
+              <span className="text-label-md text-accent-500 bg-accent-500/10 px-3 py-1.5 rounded-full">
                 {agent.category}
               </span>
               <h1 className="text-display-sm text-gray-900 mt-3 tracking-tight">
@@ -110,7 +110,7 @@ function SalesAgentPage({ agent }: { agent: (typeof agents)[0] }) {
                   key={item}
                   className="flex items-start gap-3.5 p-4 rounded-[14px] bg-gray-50/80 border border-gray-100"
                 >
-                  <div className="w-5 h-5 bg-gray-900 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div className="w-5 h-5 bg-accent-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                     <Check className="w-3 h-3 text-white" strokeWidth={3} />
                   </div>
                   <span className="text-body-md text-gray-700">{item}</span>
@@ -127,7 +127,7 @@ function SalesAgentPage({ agent }: { agent: (typeof agents)[0] }) {
                   key={item}
                   className="flex items-start gap-3.5 p-4 rounded-[14px] bg-primary-50/50 border border-primary-100"
                 >
-                  <div className="w-5 h-5 bg-primary-600 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div className="w-5 h-5 bg-primary-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                     <Check className="w-3 h-3 text-white" strokeWidth={3} />
                   </div>
                   <span className="text-body-md text-gray-700">{item}</span>
@@ -139,10 +139,19 @@ function SalesAgentPage({ agent }: { agent: (typeof agents)[0] }) {
             <div className="flex flex-col sm:flex-row gap-4">
               <a
                 href="#"
-                className="inline-flex items-center justify-center gap-2 px-8 h-12 bg-gray-900 text-white text-label-lg rounded-full hover:bg-gray-800 hover:shadow-elevation-2 transition-all duration-200 active:scale-[0.98]"
+                className="inline-flex items-center justify-center gap-2 px-8 h-12 bg-accent-500 text-white text-label-lg rounded-full hover:bg-accent-600 hover:shadow-elevation-2 transition-all duration-200 active:scale-[0.98]"
               >
                 <Calendar className="w-4 h-4" />
                 Agendar demo del Agente de Ventas
+              </a>
+              <a
+                href="https://wa.me/56964730628"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 px-8 h-12 border border-primary-500 text-primary-600 text-label-lg rounded-full hover:bg-primary-50 transition-all duration-200 active:scale-[0.98]"
+              >
+                <MessageCircle className="w-4 h-4" />
+                WhatsApp
               </a>
             </div>
             <p className="mt-3 text-body-sm text-gray-400">
@@ -196,7 +205,7 @@ function SalesAgentPage({ agent }: { agent: (typeof agents)[0] }) {
                   className="border border-gray-200/80 rounded-[16px] p-7 hover:shadow-elevation-2 transition-all duration-200"
                 >
                   <div className="flex items-center gap-4 mb-4">
-                    <span className="w-8 h-8 bg-gray-900 text-white text-label-md rounded-[10px] flex items-center justify-center flex-shrink-0">
+                    <span className="w-8 h-8 bg-primary-500 text-white text-label-md rounded-[10px] flex items-center justify-center flex-shrink-0">
                       {index + 1}
                     </span>
                     <h3 className="text-title-lg text-gray-900">{uc.title}</h3>
@@ -340,7 +349,7 @@ function SalesAgentPage({ agent }: { agent: (typeof agents)[0] }) {
           <section className="mb-16">
             <div className="bg-gray-50/80 border border-gray-200/80 rounded-[20px] p-8 lg:p-10">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 bg-gray-900 rounded-[10px] flex items-center justify-center">
+                <div className="w-10 h-10 bg-primary-500 rounded-[10px] flex items-center justify-center">
                   <Lock className="w-5 h-5 text-white" strokeWidth={1.5} />
                 </div>
                 <h2 className="text-headline-md font-medium text-gray-900">
@@ -353,7 +362,7 @@ function SalesAgentPage({ agent }: { agent: (typeof agents)[0] }) {
               <div className="space-y-3 mb-6">
                 {agent.saasInfo.bullets.map((bullet) => (
                   <div key={bullet} className="flex items-start gap-3.5">
-                    <div className="w-5 h-5 bg-gray-900 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <div className="w-5 h-5 bg-accent-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                       <Check
                         className="w-3 h-3 text-white"
                         strokeWidth={3}
@@ -379,17 +388,19 @@ function SalesAgentPage({ agent }: { agent: (typeof agents)[0] }) {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-4">
               <a
                 href="#"
-                className="inline-flex items-center gap-2 px-8 h-12 bg-gray-900 text-white text-label-lg rounded-full hover:bg-gray-800 hover:shadow-elevation-2 transition-all duration-200 active:scale-[0.98]"
-              >
-                Probar el Agente de Ventas ahora
-                <ArrowRight className="w-4 h-4" />
-              </a>
-              <a
-                href="#"
-                className="inline-flex items-center gap-2 px-8 h-12 border border-gray-300 text-gray-700 text-label-lg rounded-full hover:bg-gray-50 hover:border-gray-400 transition-all duration-200 active:scale-[0.98]"
+                className="inline-flex items-center gap-2 px-8 h-12 bg-accent-500 text-white text-label-lg rounded-full hover:bg-accent-600 hover:shadow-elevation-2 transition-all duration-200 active:scale-[0.98]"
               >
                 <Calendar className="w-4 h-4" />
                 Agendar demo personalizada
+              </a>
+              <a
+                href="https://wa.me/56964730628"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-8 h-12 border border-primary-500 text-primary-600 text-label-lg rounded-full hover:bg-primary-50 transition-all duration-200 active:scale-[0.98]"
+              >
+                <MessageCircle className="w-4 h-4" />
+                WhatsApp
               </a>
             </div>
             <p className="text-body-sm text-gray-400 max-w-xl mx-auto mb-2">
@@ -464,7 +475,7 @@ function DefaultAgentPage({ agent }: { agent: (typeof agents)[0] }) {
                     key={feature}
                     className="flex items-start gap-3.5 p-4 rounded-[14px] bg-gray-50/80 border border-gray-100"
                   >
-                    <div className="w-5 h-5 bg-gray-900 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <div className="w-5 h-5 bg-accent-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                       <Check
                         className="w-3 h-3 text-white"
                         strokeWidth={3}
@@ -489,7 +500,7 @@ function DefaultAgentPage({ agent }: { agent: (typeof agents)[0] }) {
                     key={index}
                     className="flex items-start gap-4 p-5 border border-gray-200/80 rounded-[14px] hover:bg-gray-50/50 transition-colors duration-200"
                   >
-                    <span className="w-8 h-8 bg-gray-900 text-white text-label-md rounded-[10px] flex items-center justify-center flex-shrink-0">
+                    <span className="w-8 h-8 bg-primary-500 text-white text-label-md rounded-[10px] flex items-center justify-center flex-shrink-0">
                       {index + 1}
                     </span>
                     <span className="text-body-lg text-gray-700 pt-0.5">
@@ -504,26 +515,33 @@ function DefaultAgentPage({ agent }: { agent: (typeof agents)[0] }) {
           {/* Sidebar - Pricing card */}
           <div className="lg:col-span-1">
             <div className="sticky top-24 space-y-6">
-              {/* Price card */}
+              {/* CTA card */}
               <div className="border border-gray-200/80 rounded-[20px] p-8 bg-white shadow-elevation-1">
-                <div className="text-center mb-8">
-                  <p className="text-body-sm text-gray-500 mb-2">
-                    Suscripción mensual
+                <div className="text-center mb-6">
+                  <p className="text-title-lg text-gray-900">
+                    ¿Te interesa este agente?
                   </p>
-                  <div className="flex items-baseline justify-center gap-1">
-                    <span className="text-display-sm font-medium text-gray-900">
-                      ${agent.price}
-                    </span>
-                    <span className="text-body-lg text-gray-400">/mes</span>
-                  </div>
+                  <p className="text-body-sm text-gray-500 mt-2">
+                    Conversemos sobre cómo adaptarlo a tu negocio
+                  </p>
                 </div>
 
-                <button className="w-full h-12 bg-gray-900 text-white text-label-lg rounded-full hover:bg-gray-800 hover:shadow-elevation-2 transition-all duration-200 active:scale-[0.98] mb-3">
-                  Suscribirme ahora
-                </button>
-                <button className="w-full h-12 border border-gray-300 text-gray-700 text-label-lg rounded-full hover:bg-gray-50 hover:border-gray-400 transition-all duration-200 active:scale-[0.98]">
-                  Solicitar demo
-                </button>
+                <a
+                  href="#"
+                  className="flex items-center justify-center gap-2 w-full h-12 bg-accent-500 text-white text-label-lg rounded-full hover:bg-accent-600 hover:shadow-elevation-2 transition-all duration-200 active:scale-[0.98] mb-3"
+                >
+                  <Calendar className="w-4 h-4" />
+                  Agendar demo
+                </a>
+                <a
+                  href="https://wa.me/56964730628"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 w-full h-12 border border-primary-500 text-primary-600 text-label-lg rounded-full hover:bg-primary-50 transition-all duration-200 active:scale-[0.98]"
+                >
+                  <MessageCircle className="w-4 h-4" />
+                  WhatsApp
+                </a>
               </div>
 
               {/* Benefits */}

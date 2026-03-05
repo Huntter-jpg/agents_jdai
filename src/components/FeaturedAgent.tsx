@@ -11,6 +11,7 @@ import {
   ArrowRight,
   Check,
   Calendar,
+  MessageCircle,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -104,14 +105,14 @@ export default function FeaturedAgent() {
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <span className="inline-flex items-center gap-2 text-label-lg text-primary-600 bg-primary-50 px-4 py-2 rounded-full mb-6">
+          <span className="inline-flex items-center gap-2 text-label-lg text-accent-500 bg-accent-500/10 px-4 py-2 rounded-full mb-6">
             <TrendingUp className="w-4 h-4" />
             Agente destacado
           </span>
           <h2 className="text-display-sm text-gray-900 tracking-tight">
             Conoce a tu nuevo vendedor digital:
             <br />
-            <span className="text-gray-400">
+            <span className="text-primary-500">
               Agente IA Experto en Ventas
             </span>
           </h2>
@@ -127,9 +128,9 @@ export default function FeaturedAgent() {
               key={item.title}
               className="bg-white border border-gray-200/80 rounded-[16px] p-7 hover:shadow-elevation-3 hover:border-gray-300/60 transition-all duration-200"
             >
-              <div className="w-12 h-12 bg-primary-50 rounded-[12px] flex items-center justify-center mb-5">
+              <div className="w-12 h-12 bg-accent-50 rounded-[12px] flex items-center justify-center mb-5">
                 <item.icon
-                  className="w-6 h-6 text-primary-600"
+                  className="w-6 h-6 text-accent-500"
                   strokeWidth={1.5}
                 />
               </div>
@@ -154,7 +155,7 @@ export default function FeaturedAgent() {
                 key={uc}
                 className="flex items-start gap-3.5 p-4 bg-white rounded-[14px] border border-gray-200/80"
               >
-                <div className="w-5 h-5 bg-gray-900 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                <div className="w-5 h-5 bg-accent-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                   <Check
                     className="w-3 h-3 text-white"
                     strokeWidth={3}
@@ -222,17 +223,26 @@ export default function FeaturedAgent() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-4">
             <Link
               href="/agents/asistente-ventas"
-              className="inline-flex items-center gap-2 px-8 h-12 bg-gray-900 text-white text-label-lg rounded-full hover:bg-gray-800 hover:shadow-elevation-2 transition-all duration-200 active:scale-[0.98]"
+              className="inline-flex items-center gap-2 px-8 h-12 bg-accent-500 text-white text-label-lg rounded-full hover:bg-accent-600 hover:shadow-elevation-2 transition-all duration-200 active:scale-[0.98]"
             >
               Probar ahora el Agente de Ventas
               <ArrowRight className="w-4 h-4" />
             </Link>
             <a
               href="#"
-              className="inline-flex items-center gap-2 px-8 h-12 border border-gray-300 text-gray-700 text-label-lg rounded-full hover:bg-gray-50 hover:border-gray-400 transition-all duration-200 active:scale-[0.98]"
+              className="inline-flex items-center gap-2 px-8 h-12 border border-primary-500 text-primary-600 text-label-lg rounded-full hover:bg-primary-50 transition-all duration-200 active:scale-[0.98]"
             >
               <Calendar className="w-4 h-4" />
-              Quiero este agente adaptado a mi empresa
+              Agendar demo
+            </a>
+            <a
+              href="https://wa.me/56964730628"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-8 h-12 border border-primary-500 text-primary-600 text-label-lg rounded-full hover:bg-primary-50 transition-all duration-200 active:scale-[0.98]"
+            >
+              <MessageCircle className="w-4 h-4" />
+              WhatsApp
             </a>
           </div>
           <p className="text-body-sm text-gray-400 max-w-xl mx-auto">

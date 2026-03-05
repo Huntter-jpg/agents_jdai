@@ -4,7 +4,6 @@ import {
   Plug,
   BookOpen,
   Rocket,
-  ArrowRight,
 } from "lucide-react";
 
 const pillars = [
@@ -43,54 +42,56 @@ const pillars = [
 export default function HowItWorks() {
   return (
     <section className="py-24 px-6 lg:px-8">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-display-sm text-gray-900 tracking-tight">
+          <h2 className="font-display text-display-sm text-gray-900 tracking-tight">
             Automatización con IA,
             <br />
-            <span className="text-gray-400">diseñada para tu realidad</span>
+            <span className="text-primary-500">diseñada para tu realidad</span>
           </h2>
           <p className="mt-6 text-body-lg text-gray-500 max-w-2xl mx-auto">
             No vendemos &ldquo;bots genéricos&rdquo;. Diseñamos agentes inteligentes alineados con la estrategia, procesos y sistemas de tu organización, utilizando la metodología introgresiva de JhedAI para asegurar adopción real y retorno de inversión.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {pillars.map((pillar, index) => (
-            <div
-              key={pillar.title}
-              className="relative bg-white border border-gray-200/80 rounded-[16px] p-7 hover:shadow-elevation-3 hover:border-gray-300/60 transition-all duration-200 ease-[cubic-bezier(0.2,0,0,1)] group"
-            >
-              {/* Step number */}
-              <span className="absolute -top-3 -right-2 w-7 h-7 bg-gray-900 text-white text-label-md rounded-full flex items-center justify-center shadow-elevation-1">
-                {index + 1}
-              </span>
+        {/* Timeline infographic */}
+        <div className="relative">
+          {/* Vertical line */}
+          <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-primary-200 hidden sm:block" />
 
-              <div className="w-12 h-12 bg-gray-50 rounded-[12px] flex items-center justify-center mb-5 border border-gray-100 group-hover:bg-gray-900 transition-colors duration-200">
-                <pillar.icon
-                  className="w-6 h-6 text-gray-700 group-hover:text-white transition-colors duration-200"
-                  strokeWidth={1.5}
-                />
+          <div className="space-y-8">
+            {pillars.map((pillar, index) => (
+              <div
+                key={pillar.title}
+                className="relative flex gap-6 group"
+              >
+                {/* Step circle */}
+                <div className="relative z-10 flex-shrink-0">
+                  <div className="w-12 h-12 bg-primary-500 rounded-full flex items-center justify-center shadow-elevation-2 group-hover:bg-accent-500 transition-colors duration-300">
+                    <pillar.icon
+                      className="w-5 h-5 text-white"
+                      strokeWidth={1.5}
+                    />
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="flex-1 pb-2">
+                  <div className="flex items-center gap-3 mb-2">
+                    <span className="text-label-md text-primary-500 bg-primary-50 px-2.5 py-1 rounded-full font-display">
+                      Paso {index + 1}
+                    </span>
+                  </div>
+                  <h3 className="text-title-lg text-gray-900 mb-2">
+                    {pillar.title}
+                  </h3>
+                  <p className="text-body-md text-gray-500 leading-relaxed max-w-xl">
+                    {pillar.description}
+                  </p>
+                </div>
               </div>
-              <h3 className="text-title-lg text-gray-900 mb-3">
-                {pillar.title}
-              </h3>
-              <p className="text-body-md text-gray-500 leading-relaxed">
-                {pillar.description}
-              </p>
-            </div>
-          ))}
-        </div>
-
-        {/* CTA secundario */}
-        <div className="mt-12 text-center">
-          <a
-            href="#"
-            className="inline-flex items-center gap-2 text-label-lg text-primary-600 hover:text-primary-700 transition-colors duration-200"
-          >
-            Explorar casos de automatización con IA
-            <ArrowRight className="w-4 h-4" />
-          </a>
+            ))}
+          </div>
         </div>
       </div>
     </section>

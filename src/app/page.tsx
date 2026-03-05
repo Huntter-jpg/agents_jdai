@@ -8,7 +8,7 @@ import FeaturedAgent from "@/components/FeaturedAgent";
 import CategoryFilter from "@/components/CategoryFilter";
 import AgentCard from "@/components/AgentCard";
 import { agents } from "@/data/agents";
-import { Calendar, MessageSquare } from "lucide-react";
+import { Calendar, MessageCircle } from "lucide-react";
 
 export default function Home() {
   const [selectedCategory, setSelectedCategory] = useState("Todos");
@@ -35,7 +35,7 @@ export default function Home() {
             <h2 className="text-display-sm text-gray-900 tracking-tight">
               Agentes especialistas listos
               <br />
-              <span className="text-gray-400">para adaptar a tu negocio</span>
+              <span className="text-primary-500">para adaptar a tu negocio</span>
             </h2>
             <p className="mt-6 text-body-lg text-gray-500 max-w-2xl mx-auto">
               Explora nuestra biblioteca de agentes diseñados para funciones
@@ -75,7 +75,7 @@ export default function Home() {
           <h2 className="text-display-sm text-gray-900 tracking-tight">
             Transforma tu operación
             <br />
-            <span className="text-gray-400">con agentes de IA a medida</span>
+            <span className="text-primary-500">con agentes de IA a medida</span>
           </h2>
           <p className="mt-6 text-body-lg text-gray-500 max-w-lg mx-auto">
             Conversemos sobre tus procesos y te mostramos cómo un agente
@@ -84,17 +84,19 @@ export default function Home() {
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href="#"
-              className="inline-flex items-center gap-2 px-8 h-12 bg-gray-900 text-white text-label-lg rounded-full hover:bg-gray-800 hover:shadow-elevation-2 transition-all duration-200 active:scale-[0.98]"
+              className="inline-flex items-center gap-2 px-8 h-12 bg-accent-500 text-white text-label-lg rounded-full hover:bg-accent-600 hover:shadow-elevation-2 transition-all duration-200 active:scale-[0.98]"
             >
               <Calendar className="w-4 h-4" />
               Agendar demo estratégica
             </a>
             <a
-              href="#"
-              className="inline-flex items-center gap-2 px-8 h-12 border border-gray-300 text-gray-700 text-label-lg rounded-full hover:bg-gray-50 hover:border-gray-400 transition-all duration-200 active:scale-[0.98]"
+              href="https://wa.me/56964730628"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-8 h-12 border border-primary-500 text-primary-600 text-label-lg rounded-full hover:bg-primary-50 transition-all duration-200 active:scale-[0.98]"
             >
-              <MessageSquare className="w-4 h-4" />
-              Hablar con un experto
+              <MessageCircle className="w-4 h-4" />
+              WhatsApp
             </a>
           </div>
           <p className="mt-5 text-body-sm text-gray-400 max-w-md mx-auto">

@@ -2,37 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap');
 
 :root {
   --background: #ffffff;
   --foreground: #202124;
   --surface: #F8F9FA;
   --surface-variant: #F1F3F4;
-  --outline: #DADCE0;
+  --outline: #d0cfcd;
   --outline-variant: #E8EAED;
-  --primary: #4285F4;
+  --primary: #0097ce;
+  --primary-dark: #003764;
   --on-primary: #ffffff;
-  --primary-container: #D2E3FC;
-  --on-primary-container: #174EA6;
+  --primary-container: #e6f4fa;
+  --on-primary-container: #003764;
+  --accent: #ff5f00;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: 'Google Sans', 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Source Sans 3', system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* MD3 Focus Ring for A11y */
+/* Focus Ring for A11y */
 *:focus-visible {
   outline: 2px solid var(--primary);
   outline-offset: 2px;
   border-radius: 8px;
 }
 
-/* Google-style scrollbar */
+/* Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -43,18 +45,18 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #dadce0;
+  background: #d0cfcd;
   border-radius: 100px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #bdc1c6;
+  background: #9AA0A6;
 }
 
-/* Google selection */
+/* Selection */
 ::selection {
-  background: #D2E3FC;
-  color: #174EA6;
+  background: #e6f4fa;
+  color: #003764;
 }
 
 @layer base {
