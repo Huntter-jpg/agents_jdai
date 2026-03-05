@@ -11,7 +11,7 @@ function getConfig(mobile: boolean): ISourceOptions {
     background: { color: { value: "transparent" } },
     fpsLimit: 60,
     particles: {
-      color: { value: ["#0097ce", "#003764", "#ff5f00"] },
+      color: { value: ["#0097ce", "#003764", "#4db5dc"] },
       links: {
         color: "#0097ce",
         distance: mobile ? 120 : 150,

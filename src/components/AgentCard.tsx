@@ -57,7 +57,7 @@ export default function AgentCard({ agent }: AgentCardProps) {
 
         {/* CTA */}
         <div className="flex items-center justify-end">
-          <span className="text-label-lg text-accent-500 flex items-center gap-1.5 group-hover:gap-2.5 transition-all duration-200">
+          <span className="text-label-lg text-primary-500 flex items-center gap-1.5 group-hover:gap-2.5 transition-all duration-200">
             Ver detalles del agente
             <ArrowRight className="w-4 h-4" />
           </span>

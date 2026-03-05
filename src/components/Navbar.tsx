@@ -13,7 +13,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5">
-            <div className="w-8 h-8 bg-accent-500 rounded-lg flex items-center justify-center">
+            <div className="w-8 h-8 bg-primary-500 rounded-lg flex items-center justify-center">
               <Bot className="w-5 h-5 text-white" strokeWidth={1.5} />
             </div>
             <span className="font-display text-title-md text-white">
@@ -30,7 +30,7 @@ export default function Navbar() {
               Inicio
             </Link>
             <Link
-              href="/#agentes"
+              href="/agentes"
               className="text-label-lg text-white/80 hover:text-white hover:bg-white/10 px-4 py-2.5 rounded-full transition-colors duration-200"
             >
               Agentes
@@ -47,7 +47,7 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-3">
             <a
               href="#"
-              className="inline-flex items-center gap-2 text-label-lg bg-accent-500 text-white px-6 h-10 rounded-full hover:bg-accent-600 hover:shadow-elevation-2 transition-all duration-200 active:scale-[0.98]"
+              className="inline-flex items-center gap-2 text-label-lg bg-primary-500 text-white px-6 h-10 rounded-full hover:bg-primary-600 hover:shadow-elevation-2 transition-all duration-200 active:scale-[0.98]"
             >
               <Calendar className="w-4 h-4" />
               Agendar
@@ -86,7 +86,7 @@ export default function Navbar() {
               Inicio
             </Link>
             <Link
-              href="/#agentes"
+              href="/agentes"
               className="flex items-center h-12 px-4 text-label-lg text-white/80 hover:bg-white/10 rounded-xl transition-colors duration-200"
               onClick={() => setMenuOpen(false)}
             >
@@ -102,7 +102,7 @@ export default function Navbar() {
             <div className="pt-3 mt-2 border-t border-primary-800 space-y-2">
               <a
                 href="#"
-                className="flex items-center justify-center gap-2 w-full h-12 text-label-lg bg-accent-500 text-white rounded-full hover:bg-accent-600 transition-colors duration-200"
+                className="flex items-center justify-center gap-2 w-full h-12 text-label-lg bg-primary-500 text-white rounded-full hover:bg-primary-600 transition-colors duration-200"
               >
                 <Calendar className="w-4 h-4" />
                 Agendar

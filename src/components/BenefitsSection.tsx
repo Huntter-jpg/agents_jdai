@@ -63,9 +63,9 @@ export default function BenefitsSection() {
               key={benefit.title}
               className="relative bg-white/10 border border-white/20 rounded-[16px] p-7 hover:bg-white/15 hover:border-white/30 transition-all duration-200 ease-[cubic-bezier(0.2,0,0,1)]"
             >
-              <div className="w-12 h-12 bg-accent-500/20 rounded-[12px] flex items-center justify-center mb-5">
+              <div className="w-12 h-12 bg-primary-500/20 rounded-[12px] flex items-center justify-center mb-5">
                 <benefit.icon
-                  className="w-6 h-6 text-accent-500"
+                  className="w-6 h-6 text-primary-500"
                   strokeWidth={1.5}
                 />
               </div>

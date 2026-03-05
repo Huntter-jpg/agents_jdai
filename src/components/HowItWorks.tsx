@@ -67,7 +67,7 @@ export default function HowItWorks() {
               >
                 {/* Step circle */}
                 <div className="relative z-10 flex-shrink-0">
-                  <div className="w-12 h-12 bg-primary-500 rounded-full flex items-center justify-center shadow-elevation-2 group-hover:bg-accent-500 transition-colors duration-300">
+                  <div className="w-12 h-12 bg-primary-500 rounded-full flex items-center justify-center shadow-elevation-2 group-hover:bg-primary-500 transition-colors duration-300">
                     <pillar.icon
                       className="w-5 h-5 text-white"
                       strokeWidth={1.5}

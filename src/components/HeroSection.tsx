@@ -57,7 +57,7 @@ export default function HeroSection() {
           {bullets.map((bullet) => (
             <div key={bullet} className="flex items-start gap-3">
               <CheckCircle
-                className="w-5 h-5 text-accent-500 flex-shrink-0 mt-0.5"
+                className="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5"
                 strokeWidth={1.5}
               />
               <span className="text-body-md text-gray-700">{bullet}</span>
@@ -69,7 +69,7 @@ export default function HeroSection() {
         <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
             href="#"
-            className="inline-flex items-center gap-2 px-8 h-12 bg-accent-500 text-white text-label-lg rounded-full hover:bg-accent-600 hover:shadow-elevation-2 transition-all duration-200 active:scale-[0.98]"
+            className="inline-flex items-center gap-2 px-8 h-12 bg-primary-500 text-white text-label-lg rounded-full hover:bg-primary-600 hover:shadow-elevation-2 transition-all duration-200 active:scale-[0.98]"
           >
             <Calendar className="w-4 h-4" />
             Agendar demo estratégica

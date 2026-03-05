@@ -57,7 +57,7 @@ function SalesAgentPage({ agent }: { agent: (typeof agents)[0] }) {
       {/* Back nav */}
       <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-8">
         <Link
-          href="/#agentes"
+          href="/agentes"
           className="inline-flex items-center gap-2 text-label-lg text-gray-500 hover:text-gray-900 hover:bg-gray-100 px-4 h-10 rounded-full transition-colors duration-200 -ml-4"
         >
           <ArrowLeft className="w-4 h-4" />
@@ -69,16 +69,16 @@ function SalesAgentPage({ agent }: { agent: (typeof agents)[0] }) {
         {/* Header */}
         <div className="max-w-4xl mb-16">
           <div className="flex items-start gap-6 mb-6">
-            <div className="w-[72px] h-[72px] bg-accent-50 rounded-[18px] flex items-center justify-center flex-shrink-0">
+            <div className="w-[72px] h-[72px] bg-primary-50 rounded-[18px] flex items-center justify-center flex-shrink-0">
               {IconComponent && (
                 <IconComponent
-                  className="w-8 h-8 text-accent-500"
+                  className="w-8 h-8 text-primary-500"
                   strokeWidth={1.4}
                 />
               )}
             </div>
             <div>
-              <span className="text-label-md text-accent-500 bg-accent-500/10 px-3 py-1.5 rounded-full">
+              <span className="text-label-md text-primary-500 bg-primary-500/10 px-3 py-1.5 rounded-full">
                 {agent.category}
               </span>
               <h1 className="text-display-sm text-gray-900 mt-3 tracking-tight">
@@ -110,7 +110,7 @@ function SalesAgentPage({ agent }: { agent: (typeof agents)[0] }) {
                   key={item}
                   className="flex items-start gap-3.5 p-4 rounded-[14px] bg-gray-50/80 border border-gray-100"
                 >
-                  <div className="w-5 h-5 bg-accent-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div className="w-5 h-5 bg-primary-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                     <Check className="w-3 h-3 text-white" strokeWidth={3} />
                   </div>
                   <span className="text-body-md text-gray-700">{item}</span>
@@ -139,7 +139,7 @@ function SalesAgentPage({ agent }: { agent: (typeof agents)[0] }) {
             <div className="flex flex-col sm:flex-row gap-4">
               <a
                 href="#"
-                className="inline-flex items-center justify-center gap-2 px-8 h-12 bg-accent-500 text-white text-label-lg rounded-full hover:bg-accent-600 hover:shadow-elevation-2 transition-all duration-200 active:scale-[0.98]"
+                className="inline-flex items-center justify-center gap-2 px-8 h-12 bg-primary-500 text-white text-label-lg rounded-full hover:bg-primary-600 hover:shadow-elevation-2 transition-all duration-200 active:scale-[0.98]"
               >
                 <Calendar className="w-4 h-4" />
                 Agendar demo del Agente de Ventas
@@ -362,7 +362,7 @@ function SalesAgentPage({ agent }: { agent: (typeof agents)[0] }) {
               <div className="space-y-3 mb-6">
                 {agent.saasInfo.bullets.map((bullet) => (
                   <div key={bullet} className="flex items-start gap-3.5">
-                    <div className="w-5 h-5 bg-accent-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <div className="w-5 h-5 bg-primary-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                       <Check
                         className="w-3 h-3 text-white"
                         strokeWidth={3}
@@ -388,7 +388,7 @@ function SalesAgentPage({ agent }: { agent: (typeof agents)[0] }) {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-4">
               <a
                 href="#"
-                className="inline-flex items-center gap-2 px-8 h-12 bg-accent-500 text-white text-label-lg rounded-full hover:bg-accent-600 hover:shadow-elevation-2 transition-all duration-200 active:scale-[0.98]"
+                className="inline-flex items-center gap-2 px-8 h-12 bg-primary-500 text-white text-label-lg rounded-full hover:bg-primary-600 hover:shadow-elevation-2 transition-all duration-200 active:scale-[0.98]"
               >
                 <Calendar className="w-4 h-4" />
                 Agendar demo personalizada
@@ -428,7 +428,7 @@ function DefaultAgentPage({ agent }: { agent: (typeof agents)[0] }) {
       {/* Back nav */}
       <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-8">
         <Link
-          href="/#agentes"
+          href="/agentes"
           className="inline-flex items-center gap-2 text-label-lg text-gray-500 hover:text-gray-900 hover:bg-gray-100 px-4 h-10 rounded-full transition-colors duration-200 -ml-4"
         >
           <ArrowLeft className="w-4 h-4" />
@@ -475,7 +475,7 @@ function DefaultAgentPage({ agent }: { agent: (typeof agents)[0] }) {
                     key={feature}
                     className="flex items-start gap-3.5 p-4 rounded-[14px] bg-gray-50/80 border border-gray-100"
                   >
-                    <div className="w-5 h-5 bg-accent-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <div className="w-5 h-5 bg-primary-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                       <Check
                         className="w-3 h-3 text-white"
                         strokeWidth={3}
@@ -528,7 +528,7 @@ function DefaultAgentPage({ agent }: { agent: (typeof agents)[0] }) {
 
                 <a
                   href="#"
-                  className="flex items-center justify-center gap-2 w-full h-12 bg-accent-500 text-white text-label-lg rounded-full hover:bg-accent-600 hover:shadow-elevation-2 transition-all duration-200 active:scale-[0.98] mb-3"
+                  className="flex items-center justify-center gap-2 w-full h-12 bg-primary-500 text-white text-label-lg rounded-full hover:bg-primary-600 hover:shadow-elevation-2 transition-all duration-200 active:scale-[0.98] mb-3"
                 >
                   <Calendar className="w-4 h-4" />
                   Agendar demo

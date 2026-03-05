@@ -9,7 +9,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-4">
             <div className="flex items-center gap-2.5 mb-5">
-              <div className="w-8 h-8 bg-accent-500 rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-primary-500 rounded-lg flex items-center justify-center">
                 <Bot className="w-5 h-5 text-white" strokeWidth={1.5} />
               </div>
               <span className="font-display text-title-md text-white">
@@ -27,8 +27,8 @@ export default function Footer() {
             <ul className="space-y-3.5">
               <li>
                 <Link
-                  href="/#agentes"
-                  className="text-body-md text-white/60 hover:text-accent-500 transition-colors duration-200"
+                  href="/agentes"
+                  className="text-body-md text-white/60 hover:text-primary-500 transition-colors duration-200"
                 >
                   Agentes
                 </Link>
@@ -36,7 +36,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/pricing"
-                  className="text-body-md text-white/60 hover:text-accent-500 transition-colors duration-200"
+                  className="text-body-md text-white/60 hover:text-primary-500 transition-colors duration-200"
                 >
                   Precios
                 </Link>
